@@ -1,0 +1,7 @@
+<svg width="100%" height="100%" viewBox="0 0 200 200">
+  <line x1="100" y1="100" x2="100" y2="200" style="stroke:black; stroke-width:3" [attr.transform]="'rotate(' + initialAngle + ', 100, 100)'" />
+  <line x1="100" y1="100" x2="100" y2="200" style="stroke:black; stroke-width:3" [attr.transform]="'rotate(-' + initialAngle + ', 100, 100)'" />
+  <circle cx="100" cy="100" r="80" stroke="black" stroke-width="3" fill="white" />
+  <line x1="100" y1="100" x2="100" y2="170" style="stroke:black; stroke-width:3" stroke-linecap="round" [attr.transform]="'rotate(' + currentAngle + ', 100, 100)'" />
+  <text x="85" y="200" fill="black">{{ currentValue }}°C</text>
+</svg>
