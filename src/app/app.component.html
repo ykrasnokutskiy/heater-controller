@@ -1,0 +1,10 @@
+<div>MIN temperature: {{ MIN_TEMPERATURE }}</div>
+<div>MAX temperature: {{ MAX_TEMPERATURE }}</div>
+<div class="controllers-container">
+  <app-round-controller
+    *ngFor="let controllerCurrentTemperature of controllersCurrentTemperatures;"
+    [minValue]=MIN_TEMPERATURE
+    [maxValue]=MAX_TEMPERATURE
+    [currentValue]=controllerCurrentTemperature
+  ></app-round-controller>
+</div>
