@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { RoundControllerComponent } from "./components/round-controller/round-controller.component";
 
 const NUMBER_OF_CONTROLLERS: number = 40; // number of controllers to display
@@ -10,7 +9,7 @@ const MAX_TEMPERATURE: number = 50; // maximum temperature for testing
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RoundControllerComponent],
+  imports: [CommonModule, RoundControllerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
