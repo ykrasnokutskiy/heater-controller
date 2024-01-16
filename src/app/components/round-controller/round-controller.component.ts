@@ -23,7 +23,7 @@ export class RoundControllerComponent implements OnInit {
   public currentAngle = this.initialAngle; // Delta between the vertical and current value line
 
   ngOnInit() {
-    // ToDo: check if the input data is valid
+    this.validateInputData();
     this.currentAngle = this.calculateDegreeFromValue(this.currentValue);
   }
 
@@ -50,6 +50,17 @@ export class RoundControllerComponent implements OnInit {
     const valueRange = maxValue - minValue;
     const degreeRange = 360 - 2 * initialAngle;
     return ((value - minValue) / valueRange) * degreeRange + initialAngle;
+  }
+
+  /**
+   * Validates the input data.
+   *
+   * @throws {Error} If the input data is invalid.
+   */
+  validateInputData() {
+    if (this.minValue >= this.maxValue || this.currentValue < this.minValue || this.currentValue > this.maxValue) {
+      throw new Error('Invalid input data');
+    }
   }
 
 }
